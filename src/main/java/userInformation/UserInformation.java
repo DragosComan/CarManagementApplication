@@ -1,23 +1,24 @@
 package userInformation;
 
-import java.util.UUID;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-public class UserInformation {
-    private UUID id;
+public abstract class UserInformation {
+    private String id;
     private String surName;
     private String firstName;
 
-    public UserInformation(UUID id, String surName, String firstName) {
+    public UserInformation(String id, String surName, String firstName) {
         this.id = id;
         this.surName = surName;
-        this.firstName = firstName;
+        this.firstName = this.firstName;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -36,4 +37,6 @@ public class UserInformation {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
+
+    public abstract UserDetails loadUserByUsername(String surname) throws UsernameNotFoundException;
 }
