@@ -1,4 +1,4 @@
-package repository;
+package entity;
 
 public class CarServiceOperations {
     private String oilFilter;
