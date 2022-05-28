@@ -1,4 +1,4 @@
-package carInsuranceValidity;
+package repository;
 
 import java.util.Date;
 

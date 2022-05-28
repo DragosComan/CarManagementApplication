@@ -1,4 +1,4 @@
-package carTechnicalInspection;
+package repository;
 
 import java.util.Date;
 
