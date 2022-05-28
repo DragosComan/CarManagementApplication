@@ -1,30 +1,33 @@
-package vehicleInformation;
+package entity;
 
 public class VehicleInformation {
-    private String classModel;
+    private String carClass;
     private String carManufacturer;
     private String carModel;
     private String carEngine;
     private String carFuel;
     private String carVIN;
     private double carKM;
+    private String carPlate;
 
-    public VehicleInformation(String classModel, String carManufacturer, String carModel, String carEngine, String carFuel, String carVIN, double carKM) {
-        this.classModel = classModel;
+
+    public VehicleInformation(String carClass, String carManufacturer, String carModel, String carEngine, String carFuel, String carVIN, double carKM, String carPlate) {
+        this.carClass = carClass;
         this.carManufacturer = carManufacturer;
         this.carModel = carModel;
         this.carEngine = carEngine;
         this.carFuel = carFuel;
         this.carVIN = carVIN;
         this.carKM = carKM;
+        this.carPlate = carPlate;
     }
 
-    public String getClassModel() {
-        return classModel;
+    public String getCarClass() {
+        return carClass;
     }
 
-    public void setClassModel(String classModel) {
-        this.classModel = classModel;
+    public void setCarClass(String carClass) {
+        this.carClass = carClass;
     }
 
     public String getCarManufacturer() {
@@ -73,5 +76,13 @@ public class VehicleInformation {
 
     public void setCarKM(double carKM) {
         this.carKM = carKM;
+    }
+
+    public String getCarPlate() {
+        return carPlate;
+    }
+
+    public void setCarPlate(String carPlate) {
+        this.carPlate = carPlate;
     }
 }

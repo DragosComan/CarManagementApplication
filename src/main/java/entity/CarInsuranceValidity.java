@@ -5,6 +5,7 @@ import java.util.Date;
 public class CarInsuranceValidity {
     public Date startDate;
     public Date endDate;
+    private String carPlate;
 
     public CarInsuranceValidity(Date startDate, Date endDate) {
         this.startDate = startDate;
@@ -29,5 +30,13 @@ public class CarInsuranceValidity {
                 "startDate=" + startDate +
                 ", endDate=" + endDate +
                 '}';
+    }
+
+    public String getCarPlate() {
+        return carPlate;
+    }
+
+    public void setCarPlate(String carPlate) {
+        this.carPlate = carPlate;
     }
 }

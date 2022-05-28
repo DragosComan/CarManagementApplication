@@ -3,7 +3,7 @@ package entity;
 import java.util.Date;
 
 public class CarCascoValidity {
-    private final String carPlate;
+    private String carPlate;
     private Date startCascoDate;
     private Date endCascoDate;
 
@@ -15,6 +15,10 @@ public class CarCascoValidity {
         this.carPlate = carPlate;
         this.startCascoDate = startCascoDate;
         this.endCascoDate = endCascoDate;
+    }
+
+    protected CarCascoValidity(){
+
     }
 
     /**

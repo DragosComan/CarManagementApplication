@@ -11,7 +11,7 @@ public abstract class UserInformation {
     public UserInformation(String id, String surName, String firstName) {
         this.id = id;
         this.surName = surName;
-        this.firstName = this.firstName;
+        this.firstName = firstName;
     }
 
     public String getId() {
@@ -36,6 +36,10 @@ public abstract class UserInformation {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public UserDetails loadUserById(String id) throws UsernameNotFoundException {
+        return null;
     }
 
     public abstract UserDetails loadUserByUsername(String surname) throws UsernameNotFoundException;

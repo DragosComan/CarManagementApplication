@@ -5,10 +5,13 @@ import java.util.Date;
 public class CarTechnicalInspection {
     public Date startInspection;
     public Date endInspection;
+    private String carPlate;
 
-    public CarTechnicalInspection(Date startInspection, Date endInspection) {
+
+    public CarTechnicalInspection(Date startInspection, Date endInspection, String carPlate) {
         this.startInspection = startInspection;
         this.endInspection = endInspection;
+        this.carPlate = carPlate;
     }
 
     public Date getStartInspection() {
@@ -25,6 +28,14 @@ public class CarTechnicalInspection {
 
     public void setEndInspection(Date endInspection) {
         this.endInspection = endInspection;
+    }
+
+    public String getCarPlate() {
+        return carPlate;
+    }
+
+    public void setCarPlate(String carPlate) {
+        this.carPlate = carPlate;
     }
 
     @Override

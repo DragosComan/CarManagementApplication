@@ -1,4 +1,4 @@
-package serviceAdmin;
+package main;
 
 public class ServiceAdmin {
     private String username;

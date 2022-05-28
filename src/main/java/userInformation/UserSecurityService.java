@@ -1,11 +1,12 @@
 package userInformation;
 
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-public class UserSecurityService extends UserInformation {
+import java.util.Optional;
+
+public class UserSecurityService extends UserInformation{
     @Autowired
     private UserRepository userRepository;
 
@@ -18,7 +19,7 @@ public class UserSecurityService extends UserInformation {
 
     @Override
     public UserDetails loadUserByUsername(String surname) throws UsernameNotFoundException {
-        User user = userRepository.findByName(surname);
+        Optional<UserInformation> user = userRepository.findById(getId());
         if(user == null) {
             throw new UsernameNotFoundException(surname);
         }
